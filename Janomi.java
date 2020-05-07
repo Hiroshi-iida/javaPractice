@@ -18,8 +18,8 @@ public class Janomi {
 				int b  = input.nextInt();
 				if(b==1) {
 					//ここでjankenメソッド起動
-					if(janken())omikuzi();
-					else{System.out.print("残念。"); //もう一度チャレンジしますか？はい(1) いいえ(2)"
+					if(janken())omikuzi();		//勝っていればtrueで戻る → おみくじメソッド起動
+					else{System.out.print("また遊んでね"); //もう一度チャレンジしますか？はい(1) いいえ(2)"
 					}
 
 				}
@@ -40,13 +40,14 @@ public class Janomi {
 
 		String[] te = {"グー","チョキ","パー"};
 
-		int a =0; //自分の勝ち数
-		int b =0; //CPの勝ち数
 
 		Scanner input = new Scanner(System.in);
 		Random r = new Random();
 
-			while(a<3 || b<3) {
+		int a =0; //自分の勝ち数
+		int b =0; //CPの勝ち数
+
+			while(a<3 && b<3) {
 				int hand  = input.nextInt();		//ユーザーが選ぶ手
 				int cp = r.nextInt(3); //ランダムに出る数値（0~2)
 
@@ -61,17 +62,18 @@ public class Janomi {
 					System.out.println("私は"+te[cp]+"あなたの負け");
 					b++;
 				}
+			}
 
 			if(a==3) {
 				System.out.println("おみくじが引けるよ");
 				return true;
 			}
 			else if(b==3) {
-				System.out.println("残念。また遊んでね");
+				System.out.println("残念。");
 				return false;
 			}
 
-			}
+			return false;
 	}
 //おみくじゲームのメソッド--------------------------------
 	public static void omikuzi() {
