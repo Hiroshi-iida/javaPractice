@@ -19,11 +19,11 @@ public class StudentMain {
 		};
 
 		System.out.println("-------------通知簿--------");
-		for(int i=0; i<students.length; i++)
+		for(int i=0; i<=Student.ID; i++)
 			students[i].grade();
 
 		System.out.println("-------------5教科の合計点数--------");
-		for(int i=0; i<students.length; i++)
+		for(int i=0; i<=Student.ID; i++)
 			students[i].printAdd();
 		System.out.print("\n");
 
@@ -31,14 +31,13 @@ public class StudentMain {
 		System.out.println("-------------追試のみ抽出--------");
 
 		String[] array = new String[] {"国語","数学","英語","理科","社会"};
-		for(int i =0; i<students.length; i++) {
+		for(int i =0; i<=Student.ID; i++) {
 			System.out.print(students[i].name+" : ");
 			for(int a = 0; a<5 ; a++) {
 				if(students[i].tuisi()[a]) {
 					System.out.print(array[a]+" ");
 				}
 			}
-
 			if(students[i].tuisi()[0] == false && students[i].tuisi()[1] ==
 				false && students[i].tuisi()[2] == false &&
 				students[i].tuisi()[3] == false && students[i].tuisi()[4] == false ){
@@ -53,10 +52,8 @@ public class StudentMain {
 
 		students = Student.sort(students);
 
-		for(int i =0; i<students.length; i++)
+		for(int i =0; i<=Student.ID; i++)
 			System.out.println((i+1)+"位は平均点が"+students[i].average()+"点の"+students[i].name);
 
-	}
-
-
+		}
 }
