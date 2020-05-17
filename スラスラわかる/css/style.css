@@ -1,0 +1,182 @@
+@charset "UTF-8";
+html{
+  font-family: sans-serif;
+}
+html * {
+  box-sizing: border-box;
+}
+body{
+  margin: 0 0 0 0;
+  background-color:#eeece9;
+}
+.wrapper{
+  margin:0 auto 0 auto;
+  max-width: 960px;
+}
+h2{
+  color: #3f5170;
+  font-size:22px;
+  border-bottom: 3px dotted #3f5170;
+  margin: 20px 0px;
+  padding: 5px;
+}
+p{
+  line-height:1.6;
+}
+
+a:link{
+  color:#d25833;
+  text-decoration: none;
+}
+a:visited{
+  color:#d25833;
+  text-decoration: none;
+}
+a:hover{
+  color:#e3937a;
+  text-decoration: none;
+}
+a:active{
+  color:#ff6a3b;
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.logo {
+  margin: 50px 0 40px 0;
+  line-height: 0;
+  text-align: center;
+}
+.nav li{
+  display: inline;
+  list-style-type: none;
+  padding-right: 30px;
+}
+.nav ul{
+  margin:0;
+  padding:20px 10px 15px 20px;
+  background-image:url(../img/menu-bg.png);
+  background-repeat: repeat-x;
+}
+.footer{
+  background-image: url(../img/footer-bg.png);
+  background-repeat:no-repeat;
+  margin-top: 30px;
+  padding: 80px 15px 20px 15px;
+  font-size: 12px;
+  color: #3f5170;
+}
+.keyvisual{
+  margin: 15px 0 0 0;
+}
+.news-item{
+  margin: 0;
+}
+
+/* ----ここからabout.html---- */
+.shop-photo{
+  float: left;
+  padding: 0 1em 1em 0;
+}
+.clear{
+  clear:both;
+}
+.info{
+  border-collapse: collapse;
+}
+.info th, .info td{
+  padding:8px;
+  border: 1px solid #bec2c7;
+  text-align: left;
+}
+.info th{
+  background-color: #dde2ea;
+  width: 90px;
+  color: #3f5170;
+  vertical-align: center;
+}
+.menu-item{
+  display: flex;
+  border-bottom: 1px dashed #bec2c7;
+  padding: 20px 8px;
+}
+.menu-photo{
+  margin-right: 16px;
+  flex: 1 1 auto;
+}
+
+.menu-text {
+flex: 0 0 336px;
+}
+
+/* ----ここからaccess.html---- */
+.map{
+  text-align: center;
+}
+/* ----ここからcontact.html---- */
+form div{
+  padding: 12px;
+  border-bottom: 1px dashed #bec2c7;
+}
+select {
+  width: 30em;
+}
+input[name="subject"]{
+  width: 30em;
+}
+textarea{
+  width: 30em;
+  height: 3em;
+}
+input[name="submit"]{
+  margin: 20px 0;
+  width: 30em;
+}
+/* ----ここからスマホ向けCSS---- */
+@media (max-width:767px){
+  .wrapper{
+    margin: 0 8px;
+  }
+  .logo{
+    margin: 30px 0;
+  }
+  .logo img{
+    width: 200px;
+  }
+  .nav{
+    background-color:#dfddda;
+  }
+  .nav li {
+    display: block;
+  }
+  .menu-item{
+    display: block;
+  }
+  .menu-photo{
+    margin-right: 0;
+    width: 100%;
+  }
+  .menu-text{
+    width: 100%;
+  }
+  .shop-photo{
+    padding-right:0;
+  }
+  select{
+    width: 100%;
+  }
+  input[name="subject"]{
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+  }
+
+  input[name="submit"]{
+    margin: 20px 0;
+    width: 100%;
+  }
+
+}
