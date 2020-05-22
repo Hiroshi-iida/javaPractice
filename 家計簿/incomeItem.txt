@@ -1,0 +1,11 @@
+salary
+sidejob
+pension
+dividend
+rentIncome
+salary
+sidejob
+pension
+dividend
+rentIncome
+salary
